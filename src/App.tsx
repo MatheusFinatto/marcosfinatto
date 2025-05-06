@@ -6,12 +6,12 @@ function App() {
         <li style={{ listStylePosition: "outside" }}>
           <div style={{ display: "flex", gap: "10px" }}>
             <span>Trabalho História - Michelangelo</span>
-            <a href="/public/trab-michelangelo.pdf" target="_blank">
-              Abrir no navegador
-            </a>
-            <a href="/public/trab-michelangelo.pdf" download>
-              Baixar
-            </a>
+              <a href="trab-michelangelo.pdf" target="_blank">
+                Abrir no navegador
+              </a>
+              <a href="trab-michelangelo.pdf" download>
+                Baixar
+              </a>
           </div>
         </li>
       </ol>
