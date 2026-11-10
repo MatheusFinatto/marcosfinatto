@@ -1,54 +1,23 @@
-# React + TypeScript + Vite
+# Trabalhos do Marcos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site com os trabalhos do Marcos, para abrir na aula sem pendrive nem login: https://marcosfinatto.vercel.app
 
-Currently, two official plugins are available:
+## Adicionar um trabalho
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Coloque o PDF na pasta `trabalhos/`. O nome do arquivo é o que aparece no site.
+   Exemplo: `História - Independência do Brasil.pdf`.
+   Só PDF é publicado. Apresentação em PowerPoint: exporte para PDF antes (Arquivo → Exportar → PDF).
+2. Faça commit e push. A Vercel publica sozinha em cerca de 1 minuto.
 
-## Expanding the ESLint configuration
+A lista mostra o mais novo primeiro (pela data do commit em que o PDF entrou).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Cada PDF também ganha um link direto, sem acento nem espaço:
+`https://marcosfinatto.vercel.app/historia-independencia-do-brasil.pdf`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Ver localmente
+
+```sh
+npm run dev   # http://localhost:3000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Não há dependências para instalar. Basta ter Node 21 ou mais novo.
